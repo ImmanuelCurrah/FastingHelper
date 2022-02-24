@@ -1,11 +1,17 @@
 class SchedulesController < ApplicationController
   before_action :set_schedule, only: %i[ show update destroy ]
+  before_action :authorize_request, only: [:create, :update, :destroy, :get_user_schedule]
 
   # GET /schedules
   def index
     @schedules = Schedule.all
 
     render json: @schedules
+  end
+
+  def get_user_schedule
+    @user = User.find(params[:user_id])
+    render json: @user.schedule
   end
 
   # GET /schedules/1
@@ -18,7 +24,7 @@ class SchedulesController < ApplicationController
     @schedule = Schedule.new(schedule_params)
 
     if @schedule.save
-      render json: @schedule, status: :created, location: @schedule
+      render json: @schedule, status: :created
     else
       render json: @schedule.errors, status: :unprocessable_entity
     end

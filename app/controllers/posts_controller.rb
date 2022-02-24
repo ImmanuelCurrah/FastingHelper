@@ -1,11 +1,17 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show update destroy ]
+  before_action :authorize_request, only: [:create, :update, :destroy, :get_user_posts]
 
   # GET /posts
   def index
     @posts = Post.all
 
     render json: @posts
+  end
+
+  def get_user_posts
+    @user = User.find(params[:user_id])
+    render json: @user.posts
   end
 
   # GET /posts/1
@@ -18,7 +24,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
-      render json: @post, status: :created, location: @post
+      render json: @post, status: :created
     else
       render json: @post.errors, status: :unprocessable_entity
     end
