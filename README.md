@@ -25,12 +25,12 @@
 
 - Make a full CRUD app
 - Make full CRUD backend with Ruby on Rails
+- Users can sign up
+- Users can set timers for their fasting, front-end
 - Have timers for different fasting schedules
 - Allow users to post stories and have comments on them
-- Allow users to join groups and dm each other
-- Allow users to post events they may be hosting
-- Users can post informational guides or help
-- App tracks users progress and they can set goals for themselves
+- Homepage shows all the users posts
+- Make blank skeletons for the other post-mvp pages
 
 <br>
 
@@ -93,6 +93,10 @@
 
 - Adding more to the discover and learn page
 - Adding so people can do file upload for images
+- Allow users to join groups and dm each other
+- Allow users to post events they may be hosting
+- Users can post informational guides or help
+- App tracks users progress and they can set goals for themselves
 
 ---
 
