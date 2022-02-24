@@ -2,7 +2,6 @@
 
 > This app is a fasting calculator app. Where you can both post stories and make groups to connect with people to help you. It will give you both information on different styles of fasting as well as timers to help you keep on track. This app's goal will be to be a type of clone of Insight Timer, but for fasting instead. My goal is to both copy and implement as much functionality and design as I can from Insight Timer.
 
-- [Overview](#overview)
 - [MVP](#mvp)
   - [Goals](#goals)
   - [Libraries and Dependencies](#libraries-and-dependencies)
@@ -17,10 +16,6 @@
 - [Code Issues & Resolutions](#code-issues--resolutions)
 
 <br>
-
-## Overview
-
-_**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
 
 <br>
 
