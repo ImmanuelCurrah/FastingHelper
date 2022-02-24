@@ -59,31 +59,25 @@
 
 ![component hierarchy](./pictures/component.png)
 
-```structure
+## Time Estimates
 
-rails app
-|__routes/tables/models
-|
-client
-|__src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
-|__ components/
-      |__ Header.jsx
-|__ services/
-
-```
-
-#### Time Estimates
-
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     60 hrs     |     3 hrs     |     TBD     |
+| Task                             | Priority | Estimated Time | Time Invested | Actual Time |
+| -------------------------------- | :------: | :------------: | :-----------: | :---------: |
+| Create Rails app                 |    L     |     .5 hrs     |     2 hrs     |    3 hrs    |
+| Scaffold models and tables       |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Add routes and model relations   |    H     |     2 hrs      |     1 hrs     |     TBD     |
+| Testing in postman               |    H     |     2 hrs      |     1 hrs     |     TBD     |
+| Deploy to heroku                 |    H     |    1.5 hrs     |     1 hrs     |     TBD     |
+| Create React app                 |    H     |     2 hrs      |     1 hrs     |     TBD     |
+| Create file structure            |    H     |    2.5 hrs     |     1 hrs     |     TBD     |
+| create some UI                   |    H     |    1.5 hrs     |     1 hrs     |     TBD     |
+| create api files                 |    H     |     2 hrs      |     1 hrs     |     TBD     |
+| create container and user data   |    H     |     5 hrs      |     1 hrs     |     TBD     |
+| Create forms                     |    H     |    2.5 hrs     |     1 hrs     |     TBD     |
+| React routing to different pages |    H     |     2 hrs      |     1 hrs     |     TBD     |
+| Create profile and stories       |    H     |     5 hrs      |     1 hrs     |     TBD     |
+| Deploy and style                 |    H     |     8 hrs      |     1 hrs     |     TBD     |
+| TOTAL                            |          |     40 hrs     |     3 hrs     |     TBD     |
 
 <br>
 
