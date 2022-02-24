@@ -29,6 +29,8 @@
 - Users can set timers for their fasting, front-end
 - Have timers for different fasting schedules
 - Allow users to post stories and have comments on them
+- Users can update both there account information and posts and comments
+- Users can delete their account as well as the posts and comments
 - Homepage shows all the users posts
 - Make blank skeletons for the other post-mvp pages
 
