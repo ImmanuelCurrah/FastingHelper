@@ -22,6 +22,7 @@ class SchedulesController < ApplicationController
   # POST /schedules
   def create
     @schedule = Schedule.new(schedule_params)
+    @schedule.user = @current_user
 
     if @schedule.save
       render json: @schedule, status: :created
