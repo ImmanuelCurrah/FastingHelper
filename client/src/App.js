@@ -2,10 +2,12 @@ import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { verifyUser } from "./services/routes/UserRoutes/userRoutes";
 import { Home, LoginPage } from "./exports";
+import { useNavigate } from "react-router-dom";
 import "./App.css";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getUser = async () => {
@@ -18,9 +20,9 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home currentUser={currentUser} />} />
+        <Route path="/home" element={<Home currentUser={currentUser} />} />
         <Route
-          path="/login"
+          path="/"
           element={<LoginPage setCurrentUser={setCurrentUser} />}
         />
       </Routes>

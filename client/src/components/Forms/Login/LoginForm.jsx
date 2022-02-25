@@ -23,7 +23,7 @@ export default function LoginForm(props) {
     e.preventDefault();
     let user = await loginUser(input);
     setCurrentUser(user);
-    navigate("/");
+    navigate("/home");
   };
 
   return (

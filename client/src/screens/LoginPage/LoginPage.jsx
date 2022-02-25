@@ -1,8 +1,9 @@
 import { LoginForm } from "../../exports";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { loginUser } from "../../services/routes/UserRoutes/userRoutes";
 import { useNavigate } from "react-router-dom";
 import { Layout } from "../../exports";
+import { verifyUser } from "../../services/routes/UserRoutes/userRoutes";
 
 import classes from "./LoginPage.module.css";
 
@@ -14,10 +15,19 @@ export default function LoginPage(props) {
   const { setCurrentUser } = props;
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const user = verifyUser();
+    if (user.data) {
+      navigate("/home");
+    } else {
+      return;
+    }
+  }, []);
+
   const loginGuest = async () => {
     const user = await loginUser(guest);
     setCurrentUser(user);
-    navigate("/");
+    navigate("/home");
   };
 
   return (
