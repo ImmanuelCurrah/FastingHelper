@@ -18,15 +18,10 @@ function App() {
   return (
     <div className="App">
       <Routes>
+        <Route path="/" element={<Home currentUser={currentUser} />} />
         <Route
-          path="/"
-          element={
-            currentUser ? (
-              <Home currentUser={currentUser} />
-            ) : (
-              <LoginPage setCurrentUser={setCurrentUser} />
-            )
-          }
+          path="/login"
+          element={<LoginPage setCurrentUser={setCurrentUser} />}
         />
       </Routes>
     </div>

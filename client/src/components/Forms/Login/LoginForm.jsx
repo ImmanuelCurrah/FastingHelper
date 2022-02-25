@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { loginUser } from "../../../services/routes/UserRoutes/userRoutes";
 
 export default function LoginForm(props) {
@@ -7,6 +8,7 @@ export default function LoginForm(props) {
     password: "",
   });
 
+  const navigate = useNavigate();
   const { setCurrentUser } = props;
 
   const changeHandler = (e) => {
@@ -19,9 +21,9 @@ export default function LoginForm(props) {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-
     let user = await loginUser(input);
     setCurrentUser(user);
+    navigate("/");
   };
 
   return (
