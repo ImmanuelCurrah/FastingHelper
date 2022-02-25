@@ -1,7 +1,7 @@
 import { api } from "../../api/apiConfig";
 import { errorHandler } from "../../error/errorHandler";
 
-export const getUserSchedule = (user_id) => {
+export const getUserSchedule = async (user_id) => {
   try {
     const response = api.get(`users/${user_id}/schedules`);
     return response.data;
@@ -10,7 +10,7 @@ export const getUserSchedule = (user_id) => {
   }
 };
 
-export const createSchedule = (user_id, scheduleData) => {
+export const createSchedule = async (user_id, scheduleData) => {
   try {
     const response = await api.post(`user/${user_id}/schedule`, {
       schedule: scheduleData,
@@ -21,7 +21,7 @@ export const createSchedule = (user_id, scheduleData) => {
   }
 };
 
-export const updateSchedule = (user_id, schedule_id, updateData) => {
+export const updateSchedule = async (user_id, schedule_id, updateData) => {
   try {
     const response = await api.put(`user/${user_id}/schedule/${schedule_id}`, {
       schedule: updateData,
@@ -32,7 +32,7 @@ export const updateSchedule = (user_id, schedule_id, updateData) => {
   }
 };
 
-export const deleteSchedule = (user_id, schedule_id) => {
+export const deleteSchedule = async (user_id, schedule_id) => {
   try {
     const response = await api.delete(
       `users/${user_id}/schedules/${schedule_id}`

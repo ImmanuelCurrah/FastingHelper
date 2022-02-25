@@ -1,7 +1,7 @@
 import { api } from "../../api/apiConfig";
 import { errorHandler } from "../../error/errorHandler";
 
-export const fetchAllProducts = () => {
+export const fetchAllProducts = async () => {
   try {
     const response = await api.get("posts");
     return response.data;
@@ -10,7 +10,7 @@ export const fetchAllProducts = () => {
   }
 };
 
-export const getPost = (id) => {
+export const getPost = async (id) => {
   try {
     const response = api.get(`posts/${id}`);
     return response.data;
@@ -19,7 +19,7 @@ export const getPost = (id) => {
   }
 };
 
-export const createPost = (postData) => {
+export const createPost = async (postData) => {
   try {
     const response = api.post("posts", { post: postData });
     return response.data;
@@ -28,7 +28,7 @@ export const createPost = (postData) => {
   }
 };
 
-export const updatePost = (id, updateData) => {
+export const updatePost = async (id, updateData) => {
   try {
     const response = await api.put(`posts/${id}`, { post: updateData });
     return response.data;
@@ -37,7 +37,7 @@ export const updatePost = (id, updateData) => {
   }
 };
 
-export const deletePost = (id) => {
+export const deletePost = async (id) => {
   try {
     const response = await api.delete(`posts/${id}`);
     return response.data;

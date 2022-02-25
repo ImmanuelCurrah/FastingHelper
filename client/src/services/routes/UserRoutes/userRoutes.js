@@ -27,7 +27,7 @@ export const verifyUser = async () => {
   }
 };
 
-export const createUser = (userData) => {
+export const createUser = async (userData) => {
   try {
     const response = await api.post("users", { user: userData });
     localStorage.setItem("authToken", response.data.token);
@@ -47,7 +47,7 @@ export const fetchAllUsers = async () => {
   }
 };
 
-export const fetchUser = (id) => {
+export const fetchUser = async (id) => {
   try {
     const response = await api.get(`user/${id}`);
     return response.data;
@@ -56,7 +56,7 @@ export const fetchUser = (id) => {
   }
 };
 
-export const updateUser = (id, updateData) => {
+export const updateUser = async (id, updateData) => {
   try {
     const response = await api.put(`user/${id}`, { user: updateData });
     return response.data;
@@ -65,7 +65,7 @@ export const updateUser = (id, updateData) => {
   }
 };
 
-export const deleteUser = (id) => {
+export const deleteUser = async (id) => {
   try {
     const response = await api.delete(`user/${id}`);
     return response.data;
