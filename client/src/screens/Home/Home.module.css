@@ -1,0 +1,33 @@
+.homepage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title_container {
+  margin-top: 5vh;
+  margin-bottom: 15vh;
+}
+
+.title {
+  color: rgb(165, 159, 159);
+}
+
+.name {
+  font-size: 2rem;
+}
+
+.box {
+  height: 12vh;
+  width: 20vw;
+  background-color: yellow;
+  border-radius: 12px;
+  margin: 10px;
+}
+
+.check_in {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

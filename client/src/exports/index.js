@@ -6,3 +6,5 @@ export { default as Layout } from "../components/Layout/Layout";
 export { default as Footer } from "../UI/Footer/Footer";
 export { default as RegisterForm } from "../components/Forms/Register/RegisterForm";
 export { default as RegisterPage } from "../screens/RegisterPage/RegisterPage";
+export { default as Posts } from "../components/Posts/Posts";
+export { default as PostContainer } from "../containers/PostsContainer/PostsContainer";

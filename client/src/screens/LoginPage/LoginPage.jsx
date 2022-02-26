@@ -8,6 +8,7 @@ import { verifyUser } from "../../services/routes/UserRoutes/userRoutes";
 import classes from "./LoginPage.module.css";
 
 export default function LoginPage(props) {
+  //eslint-disable-next-line
   const [guest, setGuest] = useState({
     email: "immanuel@me.com",
     password: 12345678,
@@ -15,13 +16,17 @@ export default function LoginPage(props) {
   const { setCurrentUser } = props;
   const navigate = useNavigate();
 
-  useEffect(async () => {
-    const user = await verifyUser();
-    if (user) {
-      navigate("/home");
-    } else {
-      return;
-    }
+  useEffect(() => {
+    const checkIfLoggedIn = async () => {
+      const user = await verifyUser();
+      if (user) {
+        navigate("/home");
+      } else {
+        return;
+      }
+    };
+    checkIfLoggedIn();
+    //eslint-disable-next-line
   }, []);
 
   const loginGuest = async () => {
@@ -37,7 +42,9 @@ export default function LoginPage(props) {
       <div className={classes.guest}>
         <div onClick={loginGuest}>continue as a guest</div>
       </div>
-      <Link to="/register">Register Here</Link>
+      <Link className={classes.link} to="/register">
+        Register Here
+      </Link>
     </Layout>
   );
 }

@@ -4,17 +4,20 @@ import { useNavigate } from "react-router-dom";
 import { verifyUser } from "../../services/routes/UserRoutes/userRoutes";
 import classes from "./NavBar.module.css";
 
-export default function () {
+export default function NavBar() {
   const [loggedIn, setLoggedIn] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(async () => {
-    const user = await verifyUser();
-    if (user) {
-      setLoggedIn(true);
-    } else {
-      setLoggedIn(false);
-    }
+  useEffect(() => {
+    const checkIfLoggedIn = async () => {
+      const user = await verifyUser();
+      if (user) {
+        setLoggedIn(true);
+      } else {
+        setLoggedIn(false);
+      }
+    };
+    checkIfLoggedIn();
   }, []);
 
   return (
