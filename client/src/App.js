@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { verifyUser } from "./services/routes/UserRoutes/userRoutes";
-import { Home, LoginPage } from "./exports";
+import { Home, LoginPage, RegisterPage } from "./exports";
 import { useNavigate } from "react-router-dom";
 import "./App.css";
 
@@ -24,6 +24,10 @@ function App() {
         <Route
           path="/"
           element={<LoginPage setCurrentUser={setCurrentUser} />}
+        />
+        <Route
+          path="/register"
+          element={<RegisterPage setCurrentUser={setCurrentUser} />}
         />
       </Routes>
     </div>

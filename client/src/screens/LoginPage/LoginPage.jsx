@@ -1,7 +1,7 @@
 import { LoginForm } from "../../exports";
 import { useState, useEffect } from "react";
 import { loginUser } from "../../services/routes/UserRoutes/userRoutes";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Layout } from "../../exports";
 import { verifyUser } from "../../services/routes/UserRoutes/userRoutes";
 
@@ -37,6 +37,7 @@ export default function LoginPage(props) {
       <div className={classes.guest}>
         <div onClick={loginGuest}>continue as a guest</div>
       </div>
+      <Link to="/register">Register Here</Link>
     </Layout>
   );
 }
