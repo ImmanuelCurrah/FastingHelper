@@ -8,7 +8,6 @@ import classes from "./Home.module.css";
 export default function Home(props) {
   const { currentUser } = props;
   const navigate = useNavigate();
-
   let firstName = "";
 
   useEffect(() => {

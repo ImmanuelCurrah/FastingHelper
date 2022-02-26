@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 import classes from "./Profile.module.css";
 
 export default function Profile(props) {
-  const { currentUser, updateUser, deleteUser } = props;
+  const { currentUser } = props;
+  if (!currentUser) {
+    return "Loading";
+  }
 
   return (
     <div className={classes.profile}>

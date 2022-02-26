@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 export default function UpdateUserForm(props) {
   const { userInfo, editUser } = props;
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const name = localStorage.getItem("name");
   const email = localStorage.getItem("email");
@@ -23,6 +24,7 @@ export default function UpdateUserForm(props) {
     editUser(id, user);
     localStorage.removeItem("name");
     localStorage.removeItem("email");
+    navigate("/users/profile");
   };
 
   return (
