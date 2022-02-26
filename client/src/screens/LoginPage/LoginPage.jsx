@@ -15,9 +15,9 @@ export default function LoginPage(props) {
   const { setCurrentUser } = props;
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const user = verifyUser();
-    if (user.data) {
+  useEffect(async () => {
+    const user = await verifyUser();
+    if (user) {
       navigate("/home");
     } else {
       return;

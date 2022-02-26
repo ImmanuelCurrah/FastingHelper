@@ -7,7 +7,6 @@ import "./App.css";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const getUser = async () => {
