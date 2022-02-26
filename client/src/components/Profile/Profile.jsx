@@ -10,16 +10,33 @@ export default function Profile(props) {
         <div className={classes.circle}></div>
         <div className={classes.profile_name}>
           <div>{currentUser && currentUser.name}</div>
-          <Link className={classes.name_link} to="/edit-profile">
+          <Link className={classes.name_link} to="edit">
             view your profile
           </Link>
         </div>
       </div>
-
-      <div className={classes.profile_link}>Timer</div>
-      <div className={classes.profile_link}>Your current Schedule</div>
-      <div className={classes.profile_link}>Recent schedules</div>
-      <div className={classes.profile_link}>fasting information</div>
+      <div className={classes.links_container}>
+        <div className={classes.profile_link}>
+          <Link className={classes.name_link} to="timer">
+            Timer
+          </Link>
+        </div>
+        <div className={classes.profile_link}>
+          <Link className={classes.name_link} to="schedule">
+            Schedule
+          </Link>
+        </div>
+        <div className={classes.profile_link}>
+          <Link className={classes.name_link} to="recent">
+            Recent
+          </Link>
+        </div>
+        <div className={classes.profile_link}>
+          <Link className={classes.name_link} to="info">
+            Info
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
