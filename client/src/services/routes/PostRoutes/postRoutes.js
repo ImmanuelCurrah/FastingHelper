@@ -10,6 +10,15 @@ export const fetchAllPosts = async () => {
   }
 };
 
+export const fetchSingleUserPosts = async (user_id) => {
+  try {
+    const response = await api.get(`users/${user_id}/posts`);
+    return response.data;
+  } catch (error) {
+    errorHandler(error, "could not find user, sorry");
+  }
+};
+
 export const getPost = async (id) => {
   try {
     const response = api.get(`posts/${id}`);

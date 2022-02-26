@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :users do 
+    resources :posts
     resources :schedules
   end
 

@@ -9,3 +9,7 @@ export { default as RegisterPage } from "../screens/RegisterPage/RegisterPage";
 export { default as Posts } from "../components/Posts/Posts";
 export { default as PostContainer } from "../containers/PostsContainer/PostsContainer";
 export { default as Card } from "../UI/Card/Card";
+export { default as CurrentUserPosts } from "../screens/CurrentUserPosts/CurrentUserPosts";
+export { default as UserContainer } from "../containers/UserContainer/UserContainer";
+export { default as ProfilePage } from "../screens/ProfilePage/ProfilePage";
+export { default as Profile } from "../components/Profile/Profile";

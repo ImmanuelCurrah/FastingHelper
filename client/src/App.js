@@ -1,7 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { verifyUser } from "./services/routes/UserRoutes/userRoutes";
-import { Home, LoginPage, RegisterPage, PostContainer } from "./exports";
+import {
+  Home,
+  LoginPage,
+  RegisterPage,
+  PostContainer,
+  UserContainer,
+} from "./exports";
 import "./App.css";
 
 function App() {
@@ -31,7 +37,14 @@ function App() {
           path="/register"
           element={<RegisterPage setCurrentUser={setCurrentUser} />}
         />
-        <Route path="/*" element={<PostContainer />} />
+        <Route
+          path="/posts/*"
+          element={<PostContainer currentUser={currentUser} />}
+        />
+        <Route
+          path="/users/*"
+          element={<UserContainer currentUser={currentUser} />}
+        />
       </Routes>
     </div>
   );
