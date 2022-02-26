@@ -1,6 +1,6 @@
 import { Layout } from "../../exports";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { verifyUser } from "../../services/routes/UserRoutes/userRoutes";
 import { Posts } from "../../exports";
 import classes from "./Home.module.css";
@@ -39,11 +39,25 @@ export default function Home(props) {
           <div className={classes.title}>
             information about how many fasts and whatnot
           </div>
+          <div className={classes.story}>
+            {currentUser ? (
+              <Link
+                className={classes.story_link}
+                to={`/user/${currentUser.id}/posts`}
+              >
+                Your Post
+              </Link>
+            ) : (
+              "loading..."
+            )}
+          </div>
         </div>
+        <div className={classes.split}></div>
         <div className={classes.check_in}>
           <div className={classes.box}></div>
           <div>How are you feeling today?</div>
-        </div>{" "}
+        </div>
+        <div className={classes.split}></div>
         <Posts />
       </div>
     </Layout>
