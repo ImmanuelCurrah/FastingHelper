@@ -10,7 +10,7 @@ export default function Profile(props) {
         <div className={classes.circle}></div>
         <div className={classes.profile_name}>
           <div>{currentUser && currentUser.name}</div>
-          <Link className={classes.name_link} to="edit">
+          <Link className={classes.name_link} to={`${currentUser.id}/edit`}>
             view your profile
           </Link>
         </div>

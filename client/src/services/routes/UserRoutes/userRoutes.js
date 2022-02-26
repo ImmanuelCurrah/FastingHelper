@@ -58,7 +58,7 @@ export const fetchUser = async (id) => {
 
 export const updateUser = async (id, updateData) => {
   try {
-    const response = await api.put(`user/${id}`, { user: updateData });
+    const response = await api.put(`users/${id}`, { user: updateData });
     return response.data;
   } catch (error) {
     errorHandler(error, "could not update your information, sorry");
