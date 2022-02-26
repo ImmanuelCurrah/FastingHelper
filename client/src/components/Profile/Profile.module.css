@@ -1,0 +1,28 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile_container {
+  margin: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.profile_name {
+  margin: 1rem;
+}
+
+.name_link {
+  font-size: 15px;
+  color: rgb(117, 139, 211);
+}
+
+.circle {
+  height: 80px;
+  width: 80px;
+  background-color: yellow;
+  border-radius: 50%;
+}

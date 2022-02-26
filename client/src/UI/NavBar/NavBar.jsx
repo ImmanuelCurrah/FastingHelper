@@ -22,6 +22,7 @@ export default function NavBar() {
 
   return (
     <div className={classes.navbar}>
+      <Link to="/">Home</Link>
       {loggedIn === true ? (
         <Link
           to="/"
