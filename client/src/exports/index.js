@@ -8,3 +8,4 @@ export { default as RegisterForm } from "../components/Forms/Register/RegisterFo
 export { default as RegisterPage } from "../screens/RegisterPage/RegisterPage";
 export { default as Posts } from "../components/Posts/Posts";
 export { default as PostContainer } from "../containers/PostsContainer/PostsContainer";
+export { default as Card } from "../UI/Card/Card";

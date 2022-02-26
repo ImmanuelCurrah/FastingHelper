@@ -1,7 +1,7 @@
 import { api } from "../../api/apiConfig";
 import { errorHandler } from "../../error/errorHandler";
 
-export const fetchAllProducts = async () => {
+export const fetchAllPosts = async () => {
   try {
     const response = await api.get("posts");
     return response.data;
