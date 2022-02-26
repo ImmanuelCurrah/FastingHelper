@@ -11,7 +11,11 @@ function App() {
   useEffect(() => {
     const getUser = async () => {
       const user = await verifyUser();
-      setCurrentUser(user);
+      if (user) {
+        setCurrentUser(user);
+      } else {
+        setCurrentUser(null);
+      }
     };
     getUser();
   }, []);
