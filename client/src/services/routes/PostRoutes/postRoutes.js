@@ -22,7 +22,7 @@ export const fetchSingleUserPosts = async (user_id) => {
 export const getPost = async (id) => {
   try {
     const response = api.get(`posts/${id}`);
-    return response.data;
+    return response;
   } catch (error) {
     errorHandler(error, "could not find that post, sorry");
   }
