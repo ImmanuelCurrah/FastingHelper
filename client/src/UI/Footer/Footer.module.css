@@ -8,3 +8,12 @@
   border-top-right-radius: 12px;
   border: 1px solid black;
 }
+
+.home {
+  text-decoration: none;
+  color: black;
+}
+
+.home:visited {
+  color: black;
+}
