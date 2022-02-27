@@ -14,7 +14,7 @@ export default function UserDetails(props) {
   return (
     <div className={classes.container}>
       <div className={classes.icon_container}>
-        <div className={classes.icon}></div>
+        <div className={classes.icon}>{currentUser.name.split("")[0]}</div>
         <div>{currentUser.name}</div>
         <div>
           <Link
