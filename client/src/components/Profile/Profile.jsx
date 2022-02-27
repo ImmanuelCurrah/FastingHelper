@@ -6,11 +6,12 @@ export default function Profile(props) {
   if (!currentUser) {
     return "Loading";
   }
+  console.log(currentUser.name.split("")[0]);
 
   return (
     <div className={classes.profile}>
       <div className={classes.profile_container}>
-        <div className={classes.circle}></div>
+        <div className={classes.circle}>{currentUser.name.split("")[0]}</div>
         <div className={classes.profile_name}>
           <div>{currentUser && currentUser.name}</div>
           <Link className={classes.name_link} to={`/users/details`}>

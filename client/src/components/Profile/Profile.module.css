@@ -5,7 +5,8 @@
 }
 
 .profile_container {
-  margin: 5vh;
+  margin-top: 8vh;
+  margin-bottom: 1vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -26,6 +27,12 @@
   width: 80px;
   background-color: yellow;
   border-radius: 50%;
+  color: black;
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .links_container {
