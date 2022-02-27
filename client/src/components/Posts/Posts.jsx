@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { fetchAllPosts } from "../../services/routes/PostRoutes/postRoutes";
 import { deletePost } from "../../services/routes/PostRoutes/postRoutes";
 import { Card } from "../../exports";
+import { AiFillEdit } from "react-icons/ai";
+import { FaTrashAlt } from "react-icons/fa";
 import classes from "./Posts.module.css";
 
 export default function Posts(props) {
@@ -36,33 +38,33 @@ export default function Posts(props) {
         {posts.map((post) => {
           return (
             <div key={post.id}>
-              <Card>
-                <div>{post.title}</div>
-                <div>{post.message}</div>
-                <div className={classes.post_links_container}>
-                  <div className={classes.post_links}>comments</div>
-                  {currentUser.id === post.user_id ? (
-                    <>
-                      <div className={classes.post_links}>
-                        <Link
-                          className={classes.edit}
-                          to={`/posts/${post.id}/edit`}
-                        >
-                          edit
-                        </Link>
-                      </div>
-                      <div
-                        onClick={() => {
-                          deletePost(post.id);
-                          window.location.reload(false);
-                        }}
-                        className={classes.post_links}
+              <Card postId={post.id}>
+                {currentUser.id === post.user_id ? (
+                  <div className={classes.edit_delete}>
+                    <div className={classes.post_links}>
+                      <Link
+                        className={classes.edit}
+                        to={`/posts/${post.id}/edit`}
                       >
-                        delete
-                      </div>
-                    </>
-                  ) : null}
-                </div>
+                        <AiFillEdit />
+                      </Link>
+                    </div>
+                    <div
+                      onClick={() => {
+                        deletePost(post.id);
+                        window.location.reload(false);
+                      }}
+                      className={classes.post_links}
+                    >
+                      <FaTrashAlt />
+                    </div>
+                  </div>
+                ) : null}
+
+                <div>{post.title}</div>
+                <div className={classes.split_post}></div>
+                <div>{post.message}</div>
+                <div className={classes.post_links_container}></div>
               </Card>
               <div className={classes.split}></div>
             </div>

@@ -4,7 +4,10 @@ class CommentsController < ApplicationController
 
   # GET /comments
   def index
-    @comments = Comment.all
+    @post = Post.find(params[:post_id])
+    @comments = @post.comments
+    # @comments = Comment.all
+    
 
     render json: @comments
   end
