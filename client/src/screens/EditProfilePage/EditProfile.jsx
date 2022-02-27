@@ -1,7 +1,7 @@
 import { UpdateUserForm } from "../../exports";
 
 export default function EditProfile(props) {
-  const { userInfo, editUser, removeUser } = props;
+  const { userInfo, editUser } = props;
 
   return (
     <div>

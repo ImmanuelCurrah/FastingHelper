@@ -32,7 +32,7 @@ export default function UserContainer(props) {
   };
 
   const removeUser = async (id) => {
-    const user = await deleteUser(id);
+    await deleteUser(id);
     const newInfo = userInfo.filter((item) => item.id !== +id);
     setUserInfo(newInfo);
   };
@@ -43,7 +43,13 @@ export default function UserContainer(props) {
         <Routes>
           <Route
             path="/profile"
-            element={<ProfilePage currentUser={currentUser} logout={logout} />}
+            element={
+              <ProfilePage
+                currentUser={currentUser}
+                logout={logout}
+                removeUser={removeUser}
+              />
+            }
           />{" "}
           <Route
             path={`/profile/:id/edit`}
@@ -51,7 +57,6 @@ export default function UserContainer(props) {
               <EditProfile
                 userInfo={userInfo}
                 editUser={editUser}
-                removeUser={removeUser}
                 defaultInput={defaultInput}
               />
             }
