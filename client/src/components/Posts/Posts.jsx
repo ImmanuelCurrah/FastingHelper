@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { fetchAllPosts } from "../../services/routes/PostRoutes/postRoutes";
 import { Card } from "../../exports";
 import classes from "./Posts.module.css";
 
-export default function Posts() {
+export default function Posts(props) {
   const [posts, setPosts] = useState([]);
-  const navigate = useNavigate();
+  const { currentUser } = props;
 
   useEffect(() => {
     const fetchPostData = async () => {
@@ -23,24 +22,22 @@ export default function Posts() {
   }, []);
 
   return (
-    <>
+    <div className={classes.posts}>
       <div className={classes.header_container}>
         <div className={classes.header}>For You:</div>
       </div>
       <div>
         {posts.map((post) => {
           return (
-            <div
-              key={post.id}
-              onClick={() => {
-                navigate("/posts");
-              }}
-            >
+            <div key={post.id}>
               <Card>
                 <div>{post.title}</div>
                 <div>{post.message}</div>
                 <div className={classes.comments_container}>
                   <div className={classes.comment}>comments</div>
+                  {currentUser.id === post.user_id ? (
+                    <div className={classes.comment}>edit</div>
+                  ) : null}
                 </div>
               </Card>
               <div className={classes.split}></div>
@@ -48,6 +45,6 @@ export default function Posts() {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }

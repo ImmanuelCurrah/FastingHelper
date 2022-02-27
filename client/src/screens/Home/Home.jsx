@@ -60,8 +60,8 @@ export default function Home(props) {
           <div>How are you feeling today?</div>
         </div>
         <div className={classes.split}></div>
-        <Posts />
       </div>
+      <Posts currentUser={currentUser} />
     </Layout>
   );
 }
