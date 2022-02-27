@@ -5,7 +5,10 @@ export default function Layout(props) {
   return (
     <div className={classes.layout}>
       <NavBar />
-      <div className={classes.props_children}>{props.children}</div>
+      <div className={classes.props_children}>
+        <div>{props.children}</div>
+      </div>
+
       <Footer />
     </div>
   );

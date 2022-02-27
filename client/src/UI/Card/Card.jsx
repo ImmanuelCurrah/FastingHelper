@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { CreateCommentForm } from "../../exports";
 import { fetchPostComments } from "../../services/routes/CommentRoutes/commentRoutes";
 import classes from "./Card.module.css";
 
 export default function Card(props) {
   const [postComments, setPostComments] = useState([]);
   const [toggleComments, setToggleComments] = useState(false);
+  const [toggle, setToggle] = useState(false);
   const { postId } = props;
 
   useEffect(() => {
@@ -13,7 +15,7 @@ export default function Card(props) {
       setPostComments(comments);
     };
     getComments();
-  }, []);
+  }, [toggle]);
 
   return (
     <div className={classes.card}>
@@ -41,12 +43,25 @@ export default function Card(props) {
         )}
         {toggleComments && (
           <div>
-            {postComments.length > 0
-              ? postComments.map((comment) => {
-                  return <div key={comment.id}>{comment.message}</div>;
-                })
-              : "no comments yet"}
+            {postComments.length > 0 ? (
+              postComments.map((comment) => {
+                return (
+                  <div key={comment.id}>
+                    <div>{comment.message}</div>
+                    <div className={classes.split}></div>
+                  </div>
+                );
+              })
+            ) : (
+              <div>
+                <div>no comments yet</div>
+                <div className={classes.split}></div>
+              </div>
+            )}
           </div>
+        )}
+        {toggleComments && (
+          <CreateCommentForm postId={postId} setToggle={setToggle} />
         )}
       </div>
     </div>

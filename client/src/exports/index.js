@@ -20,3 +20,4 @@ export { default as CreatePost } from "../screens/CreatePost/CreatePost";
 export { default as CreatePostForm } from "../components/Forms/Create/CreatePostForm/CreatePostForm";
 export { default as UpdatePostForm } from "../components/Forms/Update/UpdatePostForm/UpdatePostForm";
 export { default as EditPostPage } from "../screens/EditPostPage/EditPostPage";
+export { default as CreateCommentForm } from "../components/Forms/Create/CreateCommentForm/CreateCommentForm";

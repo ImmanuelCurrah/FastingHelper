@@ -61,7 +61,7 @@ export default function Posts(props) {
                   </div>
                 ) : null}
 
-                <div>{post.title}</div>
+                <div className={classes.username}>{post.title}</div>
                 <div className={classes.split_post}></div>
                 <div>{post.message}</div>
                 <div className={classes.post_links_container}></div>
