@@ -50,6 +50,9 @@ export default function Home(props) {
               "loading..."
             )}
           </div>
+          <Link className={classes.create_post} to="/posts">
+            Create a post
+          </Link>
         </div>
         <div className={classes.split}></div>
         <div className={classes.check_in}>

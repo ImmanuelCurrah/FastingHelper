@@ -1,4 +1,6 @@
 .card {
-  border-radius: 12px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
   background-color: grey;
 }
