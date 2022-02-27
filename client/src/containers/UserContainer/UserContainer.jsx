@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import { ProfilePage, Layout, EditProfile } from "../../exports";
+import { ProfilePage, Layout, EditProfile, UserDetails } from "../../exports";
 
 import {
   updateUser,
@@ -55,6 +55,10 @@ export default function UserContainer(props) {
                 defaultInput={defaultInput}
               />
             }
+          />
+          <Route
+            path="/details"
+            element={<UserDetails currentUser={currentUser} />}
           />
         </Routes>
       </div>

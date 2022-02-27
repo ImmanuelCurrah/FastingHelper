@@ -15,3 +15,4 @@ export { default as ProfilePage } from "../screens/ProfilePage/ProfilePage";
 export { default as Profile } from "../components/Profile/Profile";
 export { default as UpdateUserForm } from "../components/Forms/Update/UpdateUserForm/UpdateUserForm";
 export { default as EditProfile } from "../screens/EditProfilePage/EditProfile";
+export { default as UserDetails } from "../screens/UserDetails/UserDetails";

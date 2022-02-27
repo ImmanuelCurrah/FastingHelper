@@ -5,6 +5,7 @@ export default function EditProfile(props) {
 
   return (
     <div>
+      <h1>Update Account</h1>
       <UpdateUserForm userInfo={userInfo} editUser={editUser} />
     </div>
   );
