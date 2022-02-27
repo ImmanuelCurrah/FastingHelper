@@ -9,7 +9,7 @@ import {
 
 export default function UserContainer(props) {
   const [userInfo, setUserInfo] = useState({});
-  const { currentUser } = props;
+  const { currentUser, logout } = props;
 
   const defaultInput = {
     name: userInfo.name,
@@ -43,7 +43,7 @@ export default function UserContainer(props) {
         <Routes>
           <Route
             path="/profile"
-            element={<ProfilePage currentUser={currentUser} />}
+            element={<ProfilePage currentUser={currentUser} logout={logout} />}
           />{" "}
           <Route
             path={`/profile/:id/edit`}

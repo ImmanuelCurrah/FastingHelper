@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { verifyUser } from "./services/routes/UserRoutes/userRoutes";
 import {
@@ -12,6 +12,7 @@ import "./App.css";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getUser = async () => {
@@ -24,6 +25,12 @@ function App() {
     };
     getUser();
   }, []);
+
+  const logout = () => {
+    localStorage.removeItem("authToken");
+    setCurrentUser(null);
+    navigate("/");
+  };
 
   return (
     <div className="App">
@@ -43,7 +50,7 @@ function App() {
         />
         <Route
           path="/users/*"
-          element={<UserContainer currentUser={currentUser} />}
+          element={<UserContainer currentUser={currentUser} logout={logout} />}
         />
       </Routes>
     </div>
