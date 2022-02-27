@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import {
-  createPost,
   updatePost,
   deletePost,
   fetchSingleUserPosts,
 } from "../../services/routes/PostRoutes/postRoutes";
-import { Layout, CurrentUserPosts, CreatePost } from "../../exports";
+import {
+  Layout,
+  CurrentUserPosts,
+  CreatePost,
+  EditPostPage,
+} from "../../exports";
 
 export default function PostsContainer(props) {
   const [singleUserPosts, setSingleUserPosts] = useState([]);
@@ -25,11 +29,11 @@ export default function PostsContainer(props) {
   }, [currentUser]);
 
   const editPost = async (id, newData) => {
-    const post = await updatePost(id, newData);
+    await updatePost(id, newData);
   };
 
   const removePost = async (id) => {
-    const post = await deletePost(id);
+    await deletePost(id);
   };
 
   return (
@@ -47,6 +51,7 @@ export default function PostsContainer(props) {
           }
         />
         <Route path="new" element={<CreatePost />} />
+        <Route path=":id/edit" element={<EditPostPage />} />
       </Routes>
     </Layout>
   );

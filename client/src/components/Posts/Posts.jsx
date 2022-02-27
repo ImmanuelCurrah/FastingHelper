@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { fetchAllPosts } from "../../services/routes/PostRoutes/postRoutes";
+import { deletePost } from "../../services/routes/PostRoutes/postRoutes";
 import { Card } from "../../exports";
 import classes from "./Posts.module.css";
 
@@ -38,9 +40,27 @@ export default function Posts(props) {
                 <div>{post.title}</div>
                 <div>{post.message}</div>
                 <div className={classes.comments_container}>
-                  <div className={classes.comment}>comments</div>
+                  <div className={classes.post_links}>comments</div>
                   {currentUser.id === post.user_id ? (
-                    <div className={classes.comment}>edit</div>
+                    <>
+                      <div className={classes.post_links}>
+                        <Link
+                          className={classes.edit}
+                          to={`/posts/${post.id}/edit`}
+                        >
+                          edit
+                        </Link>
+                      </div>
+                      <div
+                        onClick={() => {
+                          deletePost(post.id);
+                          window.location.reload(false);
+                        }}
+                        className={classes.post_links}
+                      >
+                        delete
+                      </div>
+                    </>
                   ) : null}
                 </div>
               </Card>

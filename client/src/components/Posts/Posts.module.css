@@ -26,8 +26,16 @@
   justify-content: flex-start;
 }
 
-.comment {
+.post_links {
   margin-left: 1rem;
+  color: blue;
+}
+
+.edit {
+  text-decoration: none;
+}
+
+.edit:visited {
   color: blue;
 }
 
