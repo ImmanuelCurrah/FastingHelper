@@ -50,7 +50,7 @@ export default function Home(props) {
               "loading..."
             )}
           </div>
-          <Link className={classes.create_post} to="/posts">
+          <Link className={classes.create_post} to="/posts/new">
             Create a post
           </Link>
         </div>

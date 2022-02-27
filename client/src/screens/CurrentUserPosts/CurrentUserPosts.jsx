@@ -10,6 +10,7 @@ export default function CurrentUserPosts(props) {
 
   return (
     <div>
+      <h1>Post</h1>
       {posts.map((post) => (
         <div key={post.id}>
           <Card>{post.title}</Card>

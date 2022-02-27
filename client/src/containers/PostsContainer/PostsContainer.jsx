@@ -6,10 +6,9 @@ import {
   deletePost,
   fetchSingleUserPosts,
 } from "../../services/routes/PostRoutes/postRoutes";
-import { Layout, CurrentUserPosts } from "../../exports";
+import { Layout, CurrentUserPosts, CreatePost } from "../../exports";
 
 export default function PostsContainer(props) {
-  const [toggle, setToggle] = useState(false);
   const [singleUserPosts, setSingleUserPosts] = useState([]);
   const { currentUser } = props;
 
@@ -47,6 +46,7 @@ export default function PostsContainer(props) {
             />
           }
         />
+        <Route path="new" element={<CreatePost />} />
       </Routes>
     </Layout>
   );

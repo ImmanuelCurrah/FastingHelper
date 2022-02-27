@@ -16,3 +16,5 @@ export { default as Profile } from "../components/Profile/Profile";
 export { default as UpdateUserForm } from "../components/Forms/Update/UpdateUserForm/UpdateUserForm";
 export { default as EditProfile } from "../screens/EditProfilePage/EditProfile";
 export { default as UserDetails } from "../screens/UserDetails/UserDetails";
+export { default as CreatePost } from "../screens/CreatePost/CreatePost";
+export { default as CreatePostForm } from "../components/Forms/Create/CreatePostForm/CreatePostForm";

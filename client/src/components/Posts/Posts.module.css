@@ -17,3 +17,15 @@
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
+
+.comments_container {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.comment {
+  margin-left: 1rem;
+  color: blue;
+}
