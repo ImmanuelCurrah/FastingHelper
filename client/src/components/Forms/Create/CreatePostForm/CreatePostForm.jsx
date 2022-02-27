@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { createPost } from "../../../../services/routes/PostRoutes/postRoutes";
 import classes from "./CreatePostForm.module.css";
 
 export default function CreatePostForm() {
@@ -6,6 +8,8 @@ export default function CreatePostForm() {
     title: "",
     message: "",
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -15,8 +19,15 @@ export default function CreatePostForm() {
     }));
   };
 
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    await createPost(postInput);
+    setPostInput({ title: "", message: "" });
+    navigate("/");
+  };
+
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <label>title</label>
       <br />
       <input

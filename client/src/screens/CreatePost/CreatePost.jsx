@@ -1,6 +1,6 @@
 import { CreatePostForm } from "../../exports";
 
-export default function CreatePost() {
+export default function CreatePost(props) {
   return (
     <div>
       <h1>Write a Post</h1>
