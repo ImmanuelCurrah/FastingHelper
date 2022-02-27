@@ -39,7 +39,7 @@ export default function Posts(props) {
               <Card>
                 <div>{post.title}</div>
                 <div>{post.message}</div>
-                <div className={classes.comments_container}>
+                <div className={classes.post_links_container}>
                   <div className={classes.post_links}>comments</div>
                   {currentUser.id === post.user_id ? (
                     <>
