@@ -21,6 +21,10 @@ export default function Posts(props) {
     //eslint-disable-next-line
   }, []);
 
+  if (!currentUser) {
+    return "Loading...";
+  }
+
   return (
     <div className={classes.posts}>
       <div className={classes.header_container}>
