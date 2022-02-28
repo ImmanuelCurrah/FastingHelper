@@ -21,3 +21,6 @@ export { default as CreatePostForm } from "../components/Forms/Create/CreatePost
 export { default as UpdatePostForm } from "../components/Forms/Update/UpdatePostForm/UpdatePostForm";
 export { default as EditPostPage } from "../screens/EditPostPage/EditPostPage";
 export { default as CreateCommentForm } from "../components/Forms/Create/CreateCommentForm/CreateCommentForm";
+export { default as CreateScheduleForm } from "../components/Forms/Create/CreateScheduleForm/CreateScheduleForm";
+export { default as Schedule } from "../components/Schedule/Schedule";
+export { default as SchedulePage } from "../screens/SchedulePage/SchedulePage";

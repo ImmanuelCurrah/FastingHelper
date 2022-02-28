@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import { ProfilePage, Layout, EditProfile, UserDetails } from "../../exports";
+import {
+  ProfilePage,
+  Layout,
+  EditProfile,
+  UserDetails,
+  SchedulePage,
+} from "../../exports";
 
 import {
   updateUser,
@@ -65,6 +71,7 @@ export default function UserContainer(props) {
             path="/details"
             element={<UserDetails currentUser={currentUser} />}
           />
+          <Route path="/profile/schedule" element={<SchedulePage />} />
         </Routes>
       </div>
     </Layout>
