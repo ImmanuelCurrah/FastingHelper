@@ -4,6 +4,12 @@ import { getUserSchedule } from "../../services/routes/ScheduleRoutes/scheduleRo
 
 export default function Schedule(props) {
   const [currentSchedule, setCurrentSchedule] = useState({});
+  // const [dates, setDates] = useState({
+  //   startDate: "",
+  //   endDate: "",
+  // });
+
+  // console.log(dates);
 
   const { currentUser } = props;
   const { id } = useParams();
@@ -11,14 +17,22 @@ export default function Schedule(props) {
   useEffect(() => {
     const fetchSchedule = async () => {
       const schedule = await getUserSchedule(id);
-      console.log(schedule);
       setCurrentSchedule(schedule.data.reverse()[0]);
     };
     fetchSchedule();
   }, []);
 
-  const startDate = currentSchedule?.start_date?.split("").reverse().join("");
-  const endDate = currentSchedule?.end_date?.split("").reverse().join("");
+  let startDate = "";
+  let endDate = "";
+
+  if (currentSchedule) {
+    const startDateSetup = currentSchedule?.start_date?.split("-").reverse();
+    const endDateSetup = currentSchedule?.end_date?.split("-").reverse();
+    if (startDateSetup) {
+      startDate = `${startDateSetup[1]}-${startDateSetup[0]}-${startDateSetup[2]}`;
+      endDate = `${endDateSetup[1]}-${endDateSetup[0]}-${endDateSetup[2]}`;
+    }
+  }
 
   return (
     <>
