@@ -6,6 +6,7 @@ import {
   EditProfile,
   UserDetails,
   SchedulePage,
+  TimerPage,
 } from "../../exports";
 
 import {
@@ -74,6 +75,10 @@ export default function UserContainer(props) {
           <Route
             path=":id/profile/schedule"
             element={<SchedulePage currentUser={currentUser} />}
+          />
+          <Route
+            path="profile/timer"
+            element={<TimerPage currentUser={currentUser} />}
           />
         </Routes>
       </div>

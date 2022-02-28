@@ -24,3 +24,5 @@ export { default as CreateCommentForm } from "../components/Forms/Create/CreateC
 export { default as CreateScheduleForm } from "../components/Forms/Create/CreateScheduleForm/CreateScheduleForm";
 export { default as Schedule } from "../components/Schedule/Schedule";
 export { default as SchedulePage } from "../screens/SchedulePage/SchedulePage";
+export { default as Timer } from "../components/Timer/Timer";
+export { default as TimerPage } from "../screens/TimerPage/TimerPage";

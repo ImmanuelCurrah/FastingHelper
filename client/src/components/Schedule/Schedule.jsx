@@ -4,12 +4,6 @@ import { getUserSchedule } from "../../services/routes/ScheduleRoutes/scheduleRo
 
 export default function Schedule(props) {
   const [currentSchedule, setCurrentSchedule] = useState({});
-  // const [dates, setDates] = useState({
-  //   startDate: "",
-  //   endDate: "",
-  // });
-
-  // console.log(dates);
 
   const { currentUser } = props;
   const { id } = useParams();
