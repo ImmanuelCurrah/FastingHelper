@@ -25,7 +25,10 @@ export default function Profile(props) {
           </Link>
         </div>
         <div className={classes.profile_link}>
-          <Link className={classes.name_link} to="schedule">
+          <Link
+            className={classes.name_link}
+            to={`/users/${currentUser.id}/profile/schedule`}
+          >
             Schedule
           </Link>
         </div>

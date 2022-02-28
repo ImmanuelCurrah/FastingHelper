@@ -71,7 +71,10 @@ export default function UserContainer(props) {
             path="/details"
             element={<UserDetails currentUser={currentUser} />}
           />
-          <Route path="/profile/schedule" element={<SchedulePage />} />
+          <Route
+            path=":id/profile/schedule"
+            element={<SchedulePage currentUser={currentUser} />}
+          />
         </Routes>
       </div>
     </Layout>

@@ -4,7 +4,7 @@ import { errorHandler } from "../../error/errorHandler";
 export const getUserSchedule = async (user_id) => {
   try {
     const response = api.get(`users/${user_id}/schedules`);
-    return response.data;
+    return response;
   } catch (error) {
     errorHandler(error, "could not find your schedule, sorry");
   }
@@ -12,7 +12,7 @@ export const getUserSchedule = async (user_id) => {
 
 export const createSchedule = async (user_id, scheduleData) => {
   try {
-    const response = await api.post(`user/${user_id}/schedule`, {
+    const response = await api.post(`user/${user_id}/schedules`, {
       schedule: scheduleData,
     });
     return response.data;
