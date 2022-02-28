@@ -6,7 +6,6 @@ export default function Profile(props) {
   if (!currentUser) {
     return "Loading";
   }
-  console.log(currentUser.name.split("")[0]);
 
   return (
     <div className={classes.profile}>
