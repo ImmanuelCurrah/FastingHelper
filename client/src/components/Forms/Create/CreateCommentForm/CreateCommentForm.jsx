@@ -8,11 +8,12 @@ export default function CreateCommentForm(props) {
 
   const { postId, setToggle } = props;
 
-  const { handleChange, form } = useForm(defaultInput);
+  const { handleChange, form, setForm } = useForm(defaultInput);
 
   const onSubmit = async (e) => {
     e.preventDefault();
     await createComment(postId, form);
+    setForm(defaultInput);
     setToggle((prevToggle) => !prevToggle);
   };
 

@@ -3,9 +3,6 @@ import { useState } from "react";
 export function useForm(defaultInput) {
   const [form, setForm] = useState(defaultInput);
 
-  // console.log("form", form);
-  // console.log("default", defaultInput);
-
   const handleChange = (e) => {
     const { id, value } = e.target;
     setForm((prevState) => ({
@@ -14,5 +11,5 @@ export function useForm(defaultInput) {
     }));
   };
 
-  return { handleChange, form };
+  return { handleChange, form, setForm };
 }
