@@ -29,7 +29,7 @@ export default function Card(props) {
             }}
             className={classes.toggle_comments}
           >
-            show comments
+            show comments:
           </div>
         ) : (
           <div
@@ -38,7 +38,7 @@ export default function Card(props) {
             }}
             className={classes.toggle_comments}
           >
-            comments:
+            hide comments:
           </div>
         )}
         {toggleComments && (
