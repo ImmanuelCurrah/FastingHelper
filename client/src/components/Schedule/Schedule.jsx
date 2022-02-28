@@ -11,10 +11,14 @@ export default function Schedule(props) {
   useEffect(() => {
     const fetchSchedule = async () => {
       const schedule = await getUserSchedule(id);
+      console.log(schedule);
       setCurrentSchedule(schedule.data.reverse()[0]);
     };
     fetchSchedule();
   }, []);
+
+  const startDate = currentSchedule?.start_date?.split("").reverse().join("");
+  const endDate = currentSchedule?.end_date?.split("").reverse().join("");
 
   return (
     <>
@@ -23,8 +27,8 @@ export default function Schedule(props) {
         {currentSchedule ? (
           <div>
             <div>{`fast name: ${currentSchedule.name}`}</div>
-            <div>{`start date: ${currentSchedule.start_date}`}</div>
-            <div>{`end date: ${currentSchedule.end_date}`}</div>
+            <div>{`start date: ${startDate}`}</div>
+            <div>{`end date: ${endDate}`}</div>
           </div>
         ) : (
           <div>please set a schedule</div>

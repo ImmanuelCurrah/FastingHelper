@@ -13,6 +13,7 @@ export default function CreateScheduleForm() {
   const { handleChange, form, setForm } = useForm(defaultInput);
 
   const onSubmit = async (e) => {
+    e.preventDefault();
     const newSchedule = await createSchedule(id, form);
   };
 
@@ -39,6 +40,7 @@ export default function CreateScheduleForm() {
         value={form.end_date}
         onChange={handleChange}
       />
+      <br />
       <button>create</button>
     </form>
   );
