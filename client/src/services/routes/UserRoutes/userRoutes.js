@@ -7,6 +7,7 @@ export const loginUser = async (loginData) => {
       authentication: loginData,
     });
     localStorage.setItem("authToken", response.data.token);
+    localStorage.setItem("username", response.data.user.name);
     api.defaults.headers.common.authorization = `Bearer ${response.data.token}`;
     return response.data.user;
   } catch (error) {

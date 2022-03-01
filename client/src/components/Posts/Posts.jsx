@@ -19,7 +19,7 @@ export default function Posts(props) {
       if (posts) {
         setPosts(response);
       } else {
-        setPosts(["No posts yet!"]);
+        setPosts("No posts yet!");
         return "Loading...";
       }
     };
@@ -63,6 +63,7 @@ export default function Posts(props) {
                     </div>
                   </div>
                 ) : null}
+                <div>{post.username}</div>
                 <div className={classes.username}>{post.title}</div>
                 <div>{`"${post.message}"`}</div>
                 <div className={classes.post_links_container}></div>

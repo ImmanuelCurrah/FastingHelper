@@ -5,6 +5,7 @@ import classes from "./CreatePostForm.module.css";
 
 export default function CreatePostForm() {
   const [postInput, setPostInput] = useState({
+    username: localStorage.getItem("username"),
     title: "",
     message: "",
   });
@@ -18,6 +19,8 @@ export default function CreatePostForm() {
       [id]: value,
     }));
   };
+
+  console.log(postInput);
 
   const onSubmit = async (e) => {
     e.preventDefault();
