@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import classes from "./UpdateUserForm.module.css";
 
 export default function UpdateUserForm(props) {
   //eslint-disable-next-line
@@ -30,30 +31,41 @@ export default function UpdateUserForm(props) {
 
   return (
     <form onSubmit={onSubmit}>
-      <label>Name</label>
+      <div className={classes.input}>
+        {" "}
+        <label>Name</label>
+        <br />
+        <input
+          type="text"
+          id="name"
+          value={user.name}
+          onChange={handleChange}
+        />
+        <br />
+      </div>
+      <div className={classes.input}>
+        <label>Email</label>
+        <br />
+        <input
+          type="email"
+          id="email"
+          value={user.email}
+          onChange={handleChange}
+        />
+      </div>
+      <div className={classes.input}>
+        <input
+          type="password"
+          id="password"
+          value={user.password}
+          onChange={handleChange}
+        />
+        <div>Please enter password to update</div>
+      </div>
+
       <br />
-      <input type="text" id="name" value={user.name} onChange={handleChange} />
-      <br />
-      <label>Email</label>
-      <br />
-      <input
-        type="email"
-        id="email"
-        value={user.email}
-        onChange={handleChange}
-      />
-      <br />
-      <label>Password</label>
-      <br />
-      <input
-        type="password"
-        id="password"
-        value={user.password}
-        onChange={handleChange}
-      />
-      <br />
-      <div>Please enter password to update</div>
-      <button>Submit</button>
+
+      <button className={classes.button}>Submit</button>
     </form>
   );
 }
