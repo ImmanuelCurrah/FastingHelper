@@ -12,13 +12,14 @@ export default function CreateScheduleForm(props) {
 
   const { id } = useParams();
   const { handleChange, form, setForm } = useForm(defaultInput);
-  const { setToggle } = props;
+  const { setToggle, setToggleForm } = props;
 
   const onSubmit = async (e) => {
     e.preventDefault();
     await createSchedule(id, form);
     setToggle((prevToggle) => !prevToggle);
     setForm(defaultInput);
+    setToggleForm(false);
   };
 
   return (

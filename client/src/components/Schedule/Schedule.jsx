@@ -8,7 +8,6 @@ export default function Schedule(props) {
 
   const { currentUser, toggle } = props;
   const { id } = useParams();
-  console.log(toggle);
 
   useEffect(() => {
     const fetchSchedule = async () => {

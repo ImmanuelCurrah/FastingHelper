@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { usePathWay } from "../../hooks/usePathWay";
 import { Routes, Route } from "react-router-dom";
 import {
   ProfilePage,
@@ -17,6 +18,7 @@ import {
 export default function UserContainer(props) {
   const [userInfo, setUserInfo] = useState({});
   const { currentUser, logout } = props;
+  const { pathway, setPathway } = usePathWay();
 
   const defaultInput = {
     name: userInfo.name,
@@ -45,7 +47,7 @@ export default function UserContainer(props) {
   };
 
   return (
-    <Layout>
+    <Layout path={pathway}>
       <div>
         <Routes>
           <Route
@@ -55,6 +57,7 @@ export default function UserContainer(props) {
                 currentUser={currentUser}
                 logout={logout}
                 removeUser={removeUser}
+                setPathway={setPathway}
               />
             }
           />{" "}
@@ -70,7 +73,9 @@ export default function UserContainer(props) {
           />
           <Route
             path="/details"
-            element={<UserDetails currentUser={currentUser} />}
+            element={
+              <UserDetails currentUser={currentUser} setPathway={setPathway} />
+            }
           />
           <Route
             path=":id/profile/schedule"

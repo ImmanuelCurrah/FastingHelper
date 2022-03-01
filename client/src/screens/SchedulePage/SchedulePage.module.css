@@ -1,0 +1,8 @@
+.set {
+  font-size: 15px;
+  color: #00bfb6;
+}
+
+.set:hover {
+  cursor: pointer;
+}

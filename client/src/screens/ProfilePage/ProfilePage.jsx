@@ -1,10 +1,18 @@
+import { useEffect } from "react";
+
 import { Profile } from "../../exports";
 import classes from "./ProfilePage.module.css";
 import { FaTrashAlt } from "react-icons/fa";
 import { FaSignOutAlt } from "react-icons/fa";
 
 export default function ProfilePage(props) {
-  const { currentUser, logout, removeUser } = props;
+  const { currentUser, logout, removeUser, setPathway } = props;
+
+  useEffect(() => {
+    setPathway("/");
+    //eslint-disable-next-line
+  }, []);
+
   return (
     <div>
       <Profile currentUser={currentUser} />

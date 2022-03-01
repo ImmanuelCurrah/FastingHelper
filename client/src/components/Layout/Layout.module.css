@@ -1,9 +1,5 @@
 .layout {
-  height: 100vh;
-  color: white;
-}
-
-.props_children {
   height: 92vh;
+  color: white;
   overflow-y: scroll;
 }

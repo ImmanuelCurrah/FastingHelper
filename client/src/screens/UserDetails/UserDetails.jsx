@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import classes from "./UserDetails.module.css";
 
 export default function UserDetails(props) {
-  const { currentUser } = props;
+  const { currentUser, setPathway } = props;
+
+  useEffect(() => {
+    setPathway("/users/profile");
+    //eslint-disable-next-line
+  }, []);
 
   if (!currentUser) {
     return "Loading...";
