@@ -12,7 +12,7 @@ export const fetchAllSchedules = async () => {
 
 export const getUserSchedule = async (user_id) => {
   try {
-    const response = api.get(`users/${user_id}/schedules`);
+    const response = await api.get(`users/${user_id}/schedules`);
     return response;
   } catch (error) {
     errorHandler(error, "could not find your schedule, sorry");

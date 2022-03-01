@@ -21,7 +21,7 @@ export const fetchSingleUserPosts = async (user_id) => {
 
 export const getPost = async (id) => {
   try {
-    const response = api.get(`posts/${id}`);
+    const response = await api.get(`posts/${id}`);
     return response;
   } catch (error) {
     errorHandler(error, "could not find that post, sorry");
@@ -30,7 +30,7 @@ export const getPost = async (id) => {
 
 export const createPost = async (postData) => {
   try {
-    const response = api.post("posts", { post: postData });
+    const response = await api.post("posts", { post: postData });
     return response.data;
   } catch (error) {
     errorHandler(error, "could not create that post, sorry");
