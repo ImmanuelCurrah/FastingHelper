@@ -10,11 +10,11 @@ export default function CreateScheduleForm() {
   };
 
   const { id } = useParams();
-  const { handleChange, form, setForm } = useForm(defaultInput);
+  const { handleChange, form } = useForm(defaultInput);
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    const newSchedule = await createSchedule(id, form);
+    await createSchedule(id, form);
   };
 
   return (

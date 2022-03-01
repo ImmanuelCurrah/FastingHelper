@@ -15,6 +15,7 @@ export default function Card(props) {
       setPostComments(comments);
     };
     getComments();
+    //eslint-disable-next-line
   }, [toggle]);
 
   return (

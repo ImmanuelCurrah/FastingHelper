@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 export default function UpdateUserForm(props) {
+  //eslint-disable-next-line
   const { userInfo, editUser } = props;
   const { id } = useParams();
   const navigate = useNavigate();

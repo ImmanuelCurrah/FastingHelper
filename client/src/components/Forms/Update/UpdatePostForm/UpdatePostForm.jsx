@@ -17,6 +17,7 @@ export default function UpdatePostForm() {
       defaultInput.message = post.data.message;
     };
     fetchPostData();
+    //eslint-disable-next-line
   }, []);
 
   const { id } = useParams();

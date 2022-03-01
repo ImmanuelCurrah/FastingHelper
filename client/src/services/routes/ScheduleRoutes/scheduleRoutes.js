@@ -1,4 +1,4 @@
-import { api } from "../../api/apiConfig";
+import { api } from "../../api/apiConfig.js";
 import { errorHandler } from "../../error/errorHandler";
 
 export const fetchAllSchedules = async () => {

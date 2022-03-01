@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Countdown from "react-countdown";
-import classes from "./Timer.module.css";
+// import classes from "./Timer.module.css";
 
 export default function Timer() {
   const [timer, setTimer] = useState(0);

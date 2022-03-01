@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createPost } from "../../../../services/routes/PostRoutes/postRoutes";
-import { Button } from "../../../../exports";
 import classes from "./CreatePostForm.module.css";
 
 export default function CreatePostForm() {

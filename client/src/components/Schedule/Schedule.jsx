@@ -14,6 +14,7 @@ export default function Schedule(props) {
       setCurrentSchedule(schedule.data.reverse()[0]);
     };
     fetchSchedule();
+    //eslint-disable-next-line
   }, []);
 
   let startDate = "";
