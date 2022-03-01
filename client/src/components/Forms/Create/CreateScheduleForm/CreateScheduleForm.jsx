@@ -3,7 +3,7 @@ import { createSchedule } from "../../../../services/routes/ScheduleRoutes/sched
 import { useParams } from "react-router-dom";
 import classes from "./CreateScheduleForm.module.css";
 
-export default function CreateScheduleForm() {
+export default function CreateScheduleForm(props) {
   const defaultInput = {
     name: "",
     start_date: "",
@@ -11,11 +11,14 @@ export default function CreateScheduleForm() {
   };
 
   const { id } = useParams();
-  const { handleChange, form } = useForm(defaultInput);
+  const { handleChange, form, setForm } = useForm(defaultInput);
+  const { setToggle } = props;
 
   const onSubmit = async (e) => {
     e.preventDefault();
     await createSchedule(id, form);
+    setToggle((prevToggle) => !prevToggle);
+    setForm(defaultInput);
   };
 
   return (

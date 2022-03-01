@@ -5,8 +5,9 @@ import { getUserSchedule } from "../../services/routes/ScheduleRoutes/scheduleRo
 export default function Schedule(props) {
   const [currentSchedule, setCurrentSchedule] = useState({});
 
-  const { currentUser } = props;
+  const { currentUser, toggle } = props;
   const { id } = useParams();
+  console.log(toggle);
 
   useEffect(() => {
     const fetchSchedule = async () => {
@@ -15,7 +16,7 @@ export default function Schedule(props) {
     };
     fetchSchedule();
     //eslint-disable-next-line
-  }, []);
+  }, [toggle]);
 
   let startDate = "";
   let endDate = "";
