@@ -5,6 +5,7 @@ export default function TimerPage() {
     <div>
       <h1>Timer</h1>
       <Timer />
+      <div>suggestions</div>
     </div>
   );
 }
