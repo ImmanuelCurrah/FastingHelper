@@ -1,6 +1,15 @@
 import { api } from "../../api/apiConfig";
 import { errorHandler } from "../../error/errorHandler";
 
+export const fetchAllSchedules = async () => {
+  try {
+    const response = await api.get(`schedules`);
+    return response.data;
+  } catch (error) {
+    errorHandler(error, "could not get the posts");
+  }
+};
+
 export const getUserSchedule = async (user_id) => {
   try {
     const response = api.get(`users/${user_id}/schedules`);

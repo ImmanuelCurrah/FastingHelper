@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :schedules
   end
 
+  resources :schedules
+
   get "/user/:user_id/posts", to: "posts#get_user_posts"
   get "/user/:user_id/schedule", to: "schedule#get_user_schedule"
 

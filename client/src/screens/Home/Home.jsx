@@ -1,19 +1,23 @@
 import { Layout } from "../../exports";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { verifyUser } from "../../services/routes/UserRoutes/userRoutes";
 import { Posts } from "../../exports";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsEmojiSmile } from "react-icons/bs";
 import classes from "./Home.module.css";
+import { fetchAllSchedules } from "../../services/routes/ScheduleRoutes/scheduleRoutes";
 
 export default function Home(props) {
+  const [numberOfSchedules, setNumberOfSchedules] = useState(0);
   const { currentUser } = props;
   const navigate = useNavigate();
   let firstName = "";
 
   useEffect(() => {
     const checkIfLoggedIn = async () => {
+      const schedulesNumber = await fetchAllSchedules();
+      setNumberOfSchedules(schedulesNumber.length);
       const user = await verifyUser();
       if (user) {
         return;
@@ -36,7 +40,7 @@ export default function Home(props) {
           <div className={classes.title}>FastingHelper</div>
           {firstName && <div className={classes.name}>{`Hi ${firstName}`}</div>}
           <div className={classes.title}>
-            information about how many fasts and whatnot
+            {`There has been ${numberOfSchedules} schedules set worldwide!`}
           </div>
           <div className={classes.story}>
             <Link className={classes.create_post} to="/posts/new">
