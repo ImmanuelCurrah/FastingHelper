@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getUserSchedule } from "../../services/routes/ScheduleRoutes/scheduleRoutes";
+import classes from "./Schedule.module.css";
 
 export default function Schedule(props) {
   const [currentSchedule, setCurrentSchedule] = useState({});
@@ -36,9 +37,15 @@ export default function Schedule(props) {
       <div>
         {currentSchedule ? (
           <div>
-            <div>{`fast name: ${currentSchedule.name}`}</div>
-            <div>{`start date: ${startDate}`}</div>
-            <div>{`end date: ${endDate}`}</div>
+            <div className={classes.schedule_info_card}>
+              <div>{`fast name: ${currentSchedule.name}`}</div>
+            </div>
+            <div className={classes.schedule_info_card}>
+              <div>{`start date: ${startDate}`}</div>
+            </div>
+            <div className={classes.schedule_info_card}>
+              <div>{`end date: ${endDate}`}</div>
+            </div>
           </div>
         ) : (
           <div>please set a schedule</div>
