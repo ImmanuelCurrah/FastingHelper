@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CreateScheduleForm, Schedule } from "../../exports";
 import classes from "./SchedulePage.module.css";
 
 export default function SchedulePage(props) {
   const [toggle, setToggle] = useState(false);
   const [toggleForm, setToggleForm] = useState(false);
-  const { currentUser } = props;
+  const { currentUser, setPathway } = props;
+
+  useEffect(() => {
+    setPathway("/users/profile");
+    //eslint-disable-next-line
+  }, []);
 
   return (
     <div>
