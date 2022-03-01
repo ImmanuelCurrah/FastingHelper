@@ -2,3 +2,19 @@
   height: 30vh;
   background-color: wheat;
 }
+
+.timer_num {
+  font-size: 4rem;
+}
+
+.button {
+  background-color: #00bfb6;
+  border: none;
+  border-radius: 12px;
+  height: 2rem;
+  width: 4rem;
+}
+
+.select {
+  font-size: 1.5rem;
+}
