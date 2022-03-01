@@ -1,8 +1,7 @@
 .navbar {
-  background-color: grey;
+  background-color: #111411;
   width: 100vw;
   height: 6vh;
-  border-bottom: 1px solid black;
   display: flex;
   flex-direction: row;
   align-items: center;

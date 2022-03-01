@@ -1,7 +1,7 @@
 .footer {
   height: 8vh;
   width: 100vw;
-  background-color: grey;
+  background-color: #282b28;
   position: fixed;
   bottom: 0;
   border-top-left-radius: 12px;
@@ -19,9 +19,9 @@
 
 .icons {
   text-decoration: none;
-  color: black;
+  color: rgb(117, 117, 117);
 }
 
 .icons:visited {
-  color: black;
+  color: rgb(117, 117, 117);
 }

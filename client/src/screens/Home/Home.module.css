@@ -5,7 +5,7 @@
 }
 
 .title_container {
-  margin-top: 8vh;
+  margin-top: 3vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,16 +34,16 @@
 }
 
 .story {
-  margin: 2rem;
+  margin-top: 2rem;
   height: 12vh;
   width: 20vw;
   font-size: 80%;
-  background-color: grey;
+  background-color: rgb(9, 55, 61);
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 3px solid black;
+  border: 3px solid rgb(46, 46, 46);
 }
 
 .story_link {
@@ -57,7 +57,7 @@
 
 .split {
   height: 2px;
-  background-color: black;
+  background-color: rgb(46, 46, 46);
   width: 90vw;
   margin-bottom: 1rem;
   margin-top: 1rem;
@@ -73,4 +73,9 @@
 
 .create_post {
   color: rgb(117, 139, 211);
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

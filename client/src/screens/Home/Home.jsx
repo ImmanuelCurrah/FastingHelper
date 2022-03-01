@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { verifyUser } from "../../services/routes/UserRoutes/userRoutes";
 import { Posts } from "../../exports";
+import { AiOutlinePlus } from "react-icons/ai";
 import classes from "./Home.module.css";
 
 export default function Home(props) {
@@ -32,27 +33,16 @@ export default function Home(props) {
       <div className={classes.homepage}>
         <div className={classes.title_container}>
           <div className={classes.title}>FastingHelper</div>
-          {firstName && (
-            <div className={classes.name}>{`Hi, ${firstName}`}</div>
-          )}
+          {firstName && <div className={classes.name}>{`Hi ${firstName}`}</div>}
           <div className={classes.title}>
             information about how many fasts and whatnot
           </div>
           <div className={classes.story}>
-            {currentUser ? (
-              <Link
-                className={classes.story_link}
-                to={`/user/${currentUser.id}/posts`}
-              >
-                Your Post
-              </Link>
-            ) : (
-              "loading..."
-            )}
+            <Link className={classes.create_post} to="/posts/new">
+              <AiOutlinePlus className={classes.plus} />
+            </Link>
           </div>
-          <Link className={classes.create_post} to="/posts/new">
-            Create a post
-          </Link>
+          <div>You</div>
         </div>
         <div className={classes.split}></div>
         <div className={classes.check_in}>
