@@ -9,9 +9,15 @@ export default function NavBar() {
   return (
     <div className={classes.navbar}>
       <div className={classes.icons}>
-        <IoMdNotificationsOutline />
-        <BiMessageRounded />
-        <AiOutlineSearch />
+        <div className={classes.navbar_icons}>
+          <IoMdNotificationsOutline />
+        </div>
+        <div className={classes.navbar_icons}>
+          <BiMessageRounded />
+        </div>
+        <div className={classes.navbar_icons}>
+          <AiOutlineSearch />
+        </div>
       </div>
     </div>
   );

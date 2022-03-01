@@ -15,3 +15,8 @@
   align-items: flex-end;
   width: 80vw;
 }
+
+.navbar_icons {
+  margin: 0.2rem;
+  font-size: 1.5rem;
+}
