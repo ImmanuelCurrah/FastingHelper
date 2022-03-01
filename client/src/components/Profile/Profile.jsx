@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import classes from "./Profile.module.css";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 export default function Profile(props) {
   const { currentUser } = props;
@@ -20,28 +21,36 @@ export default function Profile(props) {
       </div>
       <div className={classes.links_container}>
         <div className={classes.profile_link}>
+          <div className={classes.link}>Timer</div>
           <Link className={classes.link} to="timer">
-            Timer
+            <MdOutlineKeyboardArrowRight />
           </Link>
         </div>
+        <div className={classes.split}></div>
         <div className={classes.profile_link}>
+          <div className={classes.link}>Schedule</div>
           <Link
             className={classes.link}
             to={`/users/${currentUser.id}/profile/schedule`}
           >
-            Schedule
+            <MdOutlineKeyboardArrowRight />
           </Link>
         </div>
+        <div className={classes.split}></div>
         <div className={classes.profile_link}>
+          <div className={classes.link}>Recent</div>
           <Link className={classes.link} to="recent">
-            Recent
+            <MdOutlineKeyboardArrowRight />
           </Link>
         </div>
+        <div className={classes.split}></div>
         <div className={classes.profile_link}>
+          <div className={classes.link}>Info</div>
           <Link className={classes.link} to="info">
-            Info
+            <MdOutlineKeyboardArrowRight />
           </Link>
         </div>
+        <div className={classes.split}></div>
       </div>
     </div>
   );
