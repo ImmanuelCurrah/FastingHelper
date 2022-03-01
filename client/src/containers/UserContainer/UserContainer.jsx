@@ -68,6 +68,7 @@ export default function UserContainer(props) {
                 userInfo={userInfo}
                 editUser={editUser}
                 defaultInput={defaultInput}
+                setPathway={setPathway}
               />
             }
           />
@@ -79,11 +80,15 @@ export default function UserContainer(props) {
           />
           <Route
             path=":id/profile/schedule"
-            element={<SchedulePage currentUser={currentUser} />}
+            element={
+              <SchedulePage currentUser={currentUser} setPathway={setPathway} />
+            }
           />
           <Route
             path="profile/timer"
-            element={<TimerPage currentUser={currentUser} />}
+            element={
+              <TimerPage currentUser={currentUser} setPathway={setPathway} />
+            }
           />
         </Routes>
       </div>

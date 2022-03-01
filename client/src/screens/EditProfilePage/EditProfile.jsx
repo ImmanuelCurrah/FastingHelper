@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import { UpdateUserForm } from "../../exports";
 
 export default function EditProfile(props) {
-  const { userInfo, editUser } = props;
+  const { userInfo, editUser, setPathway } = props;
+
+  useEffect(() => {
+    setPathway("/users/profile");
+  }, []);
 
   return (
     <div>
