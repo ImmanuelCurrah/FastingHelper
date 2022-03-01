@@ -4,6 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { verifyUser } from "../../services/routes/UserRoutes/userRoutes";
 import { Posts } from "../../exports";
 import { AiOutlinePlus } from "react-icons/ai";
+import { BsEmojiSmile } from "react-icons/bs";
 import classes from "./Home.module.css";
 
 export default function Home(props) {
@@ -47,7 +48,9 @@ export default function Home(props) {
         <div className={classes.split}></div>
         <div>{new Date().toLocaleDateString()}</div>
         <div className={classes.check_in}>
-          <div className={classes.box}></div>
+          <div className={classes.box}>
+            <BsEmojiSmile />
+          </div>
           <div className={classes.check_in_messages}>
             <div className={classes.small_messages}>Daily check-in</div>
             <div>How are you feeling today?</div>
