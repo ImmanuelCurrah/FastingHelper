@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useForm } from "../../../../hooks/useForm";
 import { getPost } from "../../../../services/routes/PostRoutes/postRoutes";
 import { updatePost } from "../../../../services/routes/PostRoutes/postRoutes";
+import classes from "./UpdatePostForm.module.css";
 
 export default function UpdatePostForm() {
   const defaultInput = {
@@ -33,25 +34,28 @@ export default function UpdatePostForm() {
 
   return (
     <form onSubmit={onSubmit}>
-      <label>title</label>
-      <br />
-      <input
-        type="text"
-        id="title"
-        value={form.title}
-        onChange={handleChange}
-      />
-      <br />
-      <label>message</label>
-      <br />
-      <input
-        type="text"
-        id="message"
-        value={form.message}
-        onChange={handleChange}
-      />
-      <br />
-      <button>update</button>
+      <div className={classes.input}>
+        <label>title</label>
+        <br />
+        <input
+          type="text"
+          id="title"
+          value={form.title}
+          onChange={handleChange}
+        />
+      </div>
+      <div className={classes.input}>
+        <label>message</label>
+        <br />
+        <textarea
+          type="text"
+          id="message"
+          value={form.message}
+          onChange={handleChange}
+          className={classes.textarea}
+        />
+      </div>
+      <button className={classes.button}>update</button>
     </form>
   );
 }

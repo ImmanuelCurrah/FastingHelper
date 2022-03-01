@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { usePathWay } from "../../hooks/usePathWay";
 import {
   updatePost,
   deletePost,
@@ -15,6 +16,7 @@ import {
 export default function PostsContainer(props) {
   const [singleUserPosts, setSingleUserPosts] = useState([]);
   const { currentUser } = props;
+  const { pathway, setPathway } = usePathWay();
 
   useEffect(() => {
     const fetchUserPosts = async () => {
@@ -37,7 +39,7 @@ export default function PostsContainer(props) {
   };
 
   return (
-    <Layout>
+    <Layout path={pathway}>
       <Routes>
         <Route
           path="/"
@@ -47,11 +49,15 @@ export default function PostsContainer(props) {
               currentUser={currentUser}
               posts={singleUserPosts}
               editPost={editPost}
+              setPathway={setPathway}
             />
           }
         />
-        <Route path="new" element={<CreatePost />} />
-        <Route path=":id/edit" element={<EditPostPage />} />
+        <Route path="new" element={<CreatePost setPathway={setPathway} />} />
+        <Route
+          path=":id/edit"
+          element={<EditPostPage setPathway={setPathway} />}
+        />
       </Routes>
     </Layout>
   );

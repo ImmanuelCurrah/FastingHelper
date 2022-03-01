@@ -1,0 +1,16 @@
+.textarea {
+  height: 100px;
+}
+
+.button {
+  background-color: #00bfb6;
+  border: none;
+  border-radius: 12px;
+  height: 2rem;
+  width: 4rem;
+}
+
+.input {
+  margin: 1rem;
+  font-size: 1.3rem;
+}
