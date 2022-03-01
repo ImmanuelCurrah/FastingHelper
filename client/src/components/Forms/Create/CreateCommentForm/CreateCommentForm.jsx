@@ -3,6 +3,7 @@ import { createComment } from "../../../../services/routes/CommentRoutes/comment
 
 export default function CreateCommentForm(props) {
   const defaultInput = {
+    username: localStorage.getItem("username"),
     message: "",
   };
 

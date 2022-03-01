@@ -48,7 +48,8 @@ export default function Card(props) {
                 return (
                   <div key={comment.id}>
                     <CommentCard>
-                      <div>{comment.message}</div>
+                      <div>{`"${comment.message}"`}</div>
+                      <div>{`- ${comment.username}`}</div>
                     </CommentCard>
                   </div>
                 );

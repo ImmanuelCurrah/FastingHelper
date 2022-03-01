@@ -37,41 +37,42 @@ export default function Posts(props) {
         <div className={classes.header}>For You:</div>
       </div>
       <div>
-        {posts.map((post) => {
-          return (
-            <div key={post.id}>
-              <Card postId={post.id}>
-                {currentUser.id === post.user_id ? (
-                  <div className={classes.edit_delete}>
-                    <div className={classes.post_links}>
-                      <Link
-                        className={classes.edit}
-                        to={`/posts/${post.id}/edit`}
+        {posts &&
+          posts.map((post) => {
+            return (
+              <div key={post.id}>
+                <Card postId={post.id}>
+                  {currentUser.id === post.user_id ? (
+                    <div className={classes.edit_delete}>
+                      <div className={classes.post_links}>
+                        <Link
+                          className={classes.edit}
+                          to={`/posts/${post.id}/edit`}
+                        >
+                          <AiFillEdit />
+                        </Link>
+                      </div>
+                      <div
+                        onClick={() => {
+                          console.log(post);
+                          deletePost(post.id);
+                          window.location.reload(false);
+                        }}
+                        className={classes.post_links}
                       >
-                        <AiFillEdit />
-                      </Link>
+                        <FaTrashAlt />
+                      </div>
                     </div>
-                    <div
-                      onClick={() => {
-                        console.log(post);
-                        deletePost(post.id);
-                        window.location.reload(false);
-                      }}
-                      className={classes.post_links}
-                    >
-                      <FaTrashAlt />
-                    </div>
-                  </div>
-                ) : null}
-                <div>{post.username}</div>
-                <div className={classes.username}>{post.title}</div>
-                <div>{`"${post.message}"`}</div>
-                <div className={classes.post_links_container}></div>
-              </Card>
-              <div className={classes.split}></div>
-            </div>
-          );
-        })}
+                  ) : null}
+                  <div>{post.username}</div>
+                  <div className={classes.username}>{post.title}</div>
+                  <div>{`"${post.message}"`}</div>
+                  <div className={classes.post_links_container}></div>
+                </Card>
+                <div className={classes.split}></div>
+              </div>
+            );
+          })}
       </div>
     </div>
   );
