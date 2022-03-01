@@ -45,9 +45,16 @@ export default function Home(props) {
           <div>You</div>
         </div>
         <div className={classes.split}></div>
+        <div>{new Date().toLocaleDateString()}</div>
         <div className={classes.check_in}>
           <div className={classes.box}></div>
-          <div>How are you feeling today?</div>
+          <div className={classes.check_in_messages}>
+            <div className={classes.small_messages}>Daily check-in</div>
+            <div>How are you feeling today?</div>
+            <div className={classes.small_messages}>
+              have you checked in today?
+            </div>
+          </div>
         </div>
         <div className={classes.split}></div>
       </div>

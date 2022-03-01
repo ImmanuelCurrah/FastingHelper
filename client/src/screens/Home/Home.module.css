@@ -22,7 +22,7 @@
 .box {
   height: 12vh;
   width: 20vw;
-  background-color: yellow;
+  background-color: rgb(84, 180, 84);
   border-radius: 12px;
   margin: 10px;
 }
@@ -63,14 +63,6 @@
   margin-top: 1rem;
 }
 
-.split_bottom {
-  height: 2px;
-  background-color: black;
-  width: 90vw;
-  margin-bottom: 10rem;
-  margin-top: 1rem;
-}
-
 .create_post {
   color: rgb(117, 139, 211);
   font-size: 2rem;
@@ -78,4 +70,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.check_in_messages {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.small_messages {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: rgb(116, 116, 116);
 }
