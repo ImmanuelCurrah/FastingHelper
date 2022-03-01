@@ -1,0 +1,16 @@
+.button {
+  margin: 1rem;
+  background-color: #00bfb6;
+  border: none;
+  border-radius: 12px;
+  height: 2rem;
+  width: 4rem;
+}
+
+.label {
+  font-weight: 500;
+}
+
+.input_container {
+  margin: 0.5rem;
+}
