@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { fetchAllPosts } from "../../services/routes/PostRoutes/postRoutes";
-import { deletePost } from "../../services/routes/PostRoutes/postRoutes";
+import {
+  fetchAllPosts,
+  deletePost,
+} from "../../services/routes/PostRoutes/postRoutes";
 import { Card } from "../../exports";
 import { AiFillEdit } from "react-icons/ai";
 import { FaTrashAlt } from "react-icons/fa";
@@ -51,6 +53,7 @@ export default function Posts(props) {
                     </div>
                     <div
                       onClick={() => {
+                        console.log(post);
                         deletePost(post.id);
                         window.location.reload(false);
                       }}
@@ -60,10 +63,8 @@ export default function Posts(props) {
                     </div>
                   </div>
                 ) : null}
-
                 <div className={classes.username}>{post.title}</div>
-                <div className={classes.split_post}></div>
-                <div>{post.message}</div>
+                <div>{`"${post.message}"`}</div>
                 <div className={classes.post_links_container}></div>
               </Card>
               <div className={classes.split}></div>

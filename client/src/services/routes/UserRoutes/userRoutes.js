@@ -49,7 +49,7 @@ export const fetchAllUsers = async () => {
 
 export const fetchUser = async (id) => {
   try {
-    const response = await api.get(`user/${id}`);
+    const response = await api.get(`users/${id}`);
     return response.data;
   } catch (error) {
     errorHandler(error, "could not find that user, sorry");

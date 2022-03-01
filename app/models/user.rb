@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_one :schedule
-  has_many :posts
-  has_many :comments
+  has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   has_secure_password
 
