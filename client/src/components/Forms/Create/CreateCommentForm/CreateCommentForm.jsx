@@ -1,5 +1,7 @@
 import { useForm } from "../../../../hooks/useForm";
 import { createComment } from "../../../../services/routes/CommentRoutes/commentRoutes";
+import { Button } from "../../../../exports";
+import classes from "./CreateCommentForm.module.css";
 
 export default function CreateCommentForm(props) {
   const defaultInput = {
@@ -27,7 +29,7 @@ export default function CreateCommentForm(props) {
         onChange={handleChange}
       />
       <br />
-      <button>reply</button>
+      <Button>reply</Button>
     </form>
   );
 }

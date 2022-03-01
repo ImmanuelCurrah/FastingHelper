@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createPost } from "../../../../services/routes/PostRoutes/postRoutes";
+import { Button } from "../../../../exports";
 import classes from "./CreatePostForm.module.css";
 
 export default function CreatePostForm() {
@@ -19,8 +20,6 @@ export default function CreatePostForm() {
       [id]: value,
     }));
   };
-
-  console.log(postInput);
 
   const onSubmit = async (e) => {
     e.preventDefault();
