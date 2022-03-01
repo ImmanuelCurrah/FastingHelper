@@ -5,7 +5,7 @@ export default function EditProfile(props) {
   const { userInfo, editUser, setPathway } = props;
 
   useEffect(() => {
-    setPathway("/users/profile");
+    setPathway("/users/details");
     //eslint-disable-next-line
   }, []);
 

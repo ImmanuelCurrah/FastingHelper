@@ -21,20 +21,28 @@ export default function UserDetails(props) {
     <div className={classes.container}>
       <div className={classes.icon_container}>
         <div className={classes.icon}>{currentUser.name.split("")[0]}</div>
-        <div>{currentUser.name}</div>
-        <div>
-          <Link
-            className={classes.name_link}
-            to={`/users/profile/${currentUser.id}/edit`}
-          >
-            Edit details
-          </Link>
+        <div className={classes.name_and_link}>
+          <div>{currentUser.name}</div>
+          <div>
+            <Link
+              className={classes.name_link}
+              to={`/users/profile/${currentUser.id}/edit`}
+            >
+              Edit details
+            </Link>
+          </div>
         </div>
       </div>
       <div className={classes.split}></div>
-      <div>{currentUser.email}</div>
-      <div>{`Member since: ${date}`}</div>
-      <div>{`Last update: ${lastUpdate}`}</div>
+      <div className={classes.user_info}>
+        <div>{currentUser.email}</div>
+      </div>
+      <div className={classes.user_info}>
+        <div>{`Member since: ${date}`}</div>
+      </div>
+      <div className={classes.user_info}>
+        <div>{`Last update: ${lastUpdate}`}</div>
+      </div>
     </div>
   );
 }
