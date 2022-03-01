@@ -10,7 +10,7 @@ import classes from "./LoginPage.module.css";
 export default function LoginPage(props) {
   //eslint-disable-next-line
   const [guest, setGuest] = useState({
-    email: "immanuel@me.com",
+    email: "guest@guest.com",
     password: 12345678,
   });
   const { setCurrentUser } = props;
@@ -31,6 +31,7 @@ export default function LoginPage(props) {
 
   const loginGuest = async () => {
     const user = await loginUser(guest);
+    console.log(user);
     setCurrentUser(user);
     navigate("/home");
   };
