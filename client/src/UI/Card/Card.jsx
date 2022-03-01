@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CreateCommentForm } from "../../exports";
+import { CreateCommentForm, CommentCard } from "../../exports";
 import { fetchPostComments } from "../../services/routes/CommentRoutes/commentRoutes";
 import classes from "./Card.module.css";
 
@@ -47,8 +47,9 @@ export default function Card(props) {
               postComments.map((comment) => {
                 return (
                   <div key={comment.id}>
-                    <div>{comment.message}</div>
-                    <div className={classes.split}></div>
+                    <CommentCard>
+                      <div>{comment.message}</div>
+                    </CommentCard>
                   </div>
                 );
               })

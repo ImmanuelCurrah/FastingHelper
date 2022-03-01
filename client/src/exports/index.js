@@ -26,3 +26,4 @@ export { default as Schedule } from "../components/Schedule/Schedule";
 export { default as SchedulePage } from "../screens/SchedulePage/SchedulePage";
 export { default as Timer } from "../components/Timer/Timer";
 export { default as TimerPage } from "../screens/TimerPage/TimerPage";
+export { default as CommentCard } from "../UI/CommentCard/CommentCard";

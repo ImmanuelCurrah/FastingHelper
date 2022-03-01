@@ -47,7 +47,7 @@
 
 .split_post {
   height: 1px;
-  background-color: black;
+  background-color: rgb(46, 46, 46);
   width: 70vw;
   margin-bottom: 1rem;
   margin-top: 1rem;

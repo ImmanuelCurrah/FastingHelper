@@ -1,10 +1,6 @@
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.comment_card {
   border-radius: 12px;
-  width: 300px;
+  width: 60vw;
   margin: 50px auto;
   border: 4px solid #00bfb6;
   padding: 20px;
@@ -15,40 +11,28 @@
   position: relative;
 }
 
-.card:before {
+.comment_card:before {
   content: "";
   width: 0px;
   height: 0px;
   position: absolute;
-  border-left: 10px solid transparent;
-  border-right: 10px solid #00bfb6;
+  border-left: 10px solid #00bfb6;
+  border-right: 10px solid transparent;
   border-top: 10px solid #00bfb6;
   border-bottom: 10px solid transparent;
-  right: 20px;
+  left: 20px;
   bottom: -23px;
 }
 
-.card:after {
+.comment_card:after {
   content: "";
   width: 0px;
   height: 0px;
   position: absolute;
-  border-left: 10px solid transparent;
-  border-right: 10px solid #111411;
+  border-left: 10px solid #111411;
+  border-right: 10px solid transparent;
   border-top: 10px solid #111411;
   border-bottom: 10px solid transparent;
-  right: 24px;
+  left: 24px;
   bottom: -13px;
-}
-
-.split {
-  height: 1px;
-  background-color: rgb(46, 46, 46);
-  width: 70vw;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-
-.toggle_comments {
-  margin-bottom: 1rem;
 }
