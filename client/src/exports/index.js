@@ -28,3 +28,5 @@ export { default as Timer } from "../components/Timer/Timer";
 export { default as TimerPage } from "../screens/TimerPage/TimerPage";
 export { default as CommentCard } from "../UI/CommentCard/CommentCard";
 export { default as Button } from "../UI/Button/Button";
+export { default as RecentPage } from "../screens/RecentPage/RecentPage";
+export { default as Recent } from "../components/Recent/Recent";

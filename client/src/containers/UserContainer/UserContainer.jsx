@@ -8,6 +8,7 @@ import {
   UserDetails,
   SchedulePage,
   TimerPage,
+  RecentPage,
 } from "../../exports";
 
 import {
@@ -88,6 +89,12 @@ export default function UserContainer(props) {
             path="profile/timer"
             element={
               <TimerPage currentUser={currentUser} setPathway={setPathway} />
+            }
+          />
+          <Route
+            path=":id/profile/recent"
+            element={
+              <RecentPage setPathway={setPathway} currentUser={currentUser} />
             }
           />
         </Routes>

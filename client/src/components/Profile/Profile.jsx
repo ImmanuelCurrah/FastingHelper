@@ -39,7 +39,10 @@ export default function Profile(props) {
         <div className={classes.split}></div>
         <div className={classes.profile_link}>
           <div className={classes.link}>Recent</div>
-          <Link className={classes.link} to="recent">
+          <Link
+            className={classes.link}
+            to={`/users/${currentUser.id}/profile/recent`}
+          >
             <MdOutlineKeyboardArrowRight />
           </Link>
         </div>
