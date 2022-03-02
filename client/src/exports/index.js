@@ -30,3 +30,5 @@ export { default as CommentCard } from "../UI/CommentCard/CommentCard";
 export { default as Button } from "../UI/Button/Button";
 export { default as RecentPage } from "../screens/RecentPage/RecentPage";
 export { default as Recent } from "../components/Recent/Recent";
+export { default as Info } from "../components/Info/Info";
+export { default as InfoPage } from "../screens/InfoPage/InfoPage";

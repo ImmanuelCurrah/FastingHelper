@@ -9,6 +9,7 @@ import {
   SchedulePage,
   TimerPage,
   RecentPage,
+  InfoPage,
 } from "../../exports";
 
 import {
@@ -96,6 +97,10 @@ export default function UserContainer(props) {
             element={
               <RecentPage setPathway={setPathway} currentUser={currentUser} />
             }
+          />
+          <Route
+            path="profile/info"
+            element={<InfoPage setPathway={setPathway} />}
           />
         </Routes>
       </div>

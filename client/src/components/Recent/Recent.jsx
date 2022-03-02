@@ -5,7 +5,6 @@ import classes from "./Recent.module.css";
 
 export default function Recent(props) {
   const [pastSchedules, setPastSchedules] = useState([]);
-  const { currentUser } = props;
   const { id } = useParams();
 
   useEffect(() => {
@@ -18,7 +17,6 @@ export default function Recent(props) {
   }, []);
   return (
     <div>
-      <div>Your past schedules</div>
       <div>
         {pastSchedules.map((schedule) => {
           return (

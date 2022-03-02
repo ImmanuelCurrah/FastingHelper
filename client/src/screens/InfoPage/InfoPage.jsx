@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { Timer } from "../../exports";
+import { Info } from "../../exports";
 
-export default function TimerPage(props) {
+export default function InfoPage(props) {
   const { setPathway } = props;
 
   useEffect(() => {
@@ -11,8 +11,8 @@ export default function TimerPage(props) {
 
   return (
     <div>
-      <h1>Timer</h1>
-      <Timer />
+      <h1>Fasting Information</h1>
+      <Info />
     </div>
   );
 }
