@@ -31,7 +31,6 @@ export default function LoginPage(props) {
 
   const loginGuest = async () => {
     const user = await loginUser(guest);
-    console.log(user);
     setCurrentUser(user);
     navigate("/home");
   };
