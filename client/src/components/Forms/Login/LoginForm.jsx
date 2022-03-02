@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../../../services/routes/UserRoutes/userRoutes";
+import classes from "./LoginForm.module.css";
 
 export default function LoginForm(props) {
   const [input, setInput] = useState({
@@ -47,7 +48,7 @@ export default function LoginForm(props) {
           onChange={changeHandler}
         />
         <br />
-        <button>Login</button>
+        <button className={classes.button}>Login</button>
       </form>
     </div>
   );
