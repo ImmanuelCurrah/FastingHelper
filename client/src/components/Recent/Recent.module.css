@@ -11,7 +11,7 @@
   border-radius: 12px;
 }
 
-@media screen and (max-width: 374px) {
+@media screen and (min-width: 376px) {
   .container_above {
     display: flex;
     flex-direction: column;
