@@ -20,8 +20,8 @@
 }
 
 .box {
-  height: 12vh;
-  width: 20vw;
+  height: 100px;
+  width: 100px;
   background-color: rgb(45, 158, 45);
   border-radius: 12px;
   margin: 10px;
@@ -31,6 +31,7 @@
   justify-content: center;
   font-size: 2.5rem;
   color: black;
+  /* position: relative; */
 }
 
 .check_in {
@@ -41,8 +42,8 @@
 
 .story {
   margin-top: 2rem;
-  height: 12vh;
-  width: 20vw;
+  height: 80px;
+  width: 80px;
   font-size: 80%;
   background-color: rgb(9, 55, 61);
   border-radius: 50%;
@@ -89,4 +90,30 @@
   margin-top: 5px;
   margin-bottom: 5px;
   color: rgb(116, 116, 116);
+}
+
+@media screen and (min-width: 375px) {
+  .story {
+    margin-top: 2rem;
+    height: 100px;
+    width: 100px;
+    font-size: 80%;
+    background-color: rgb(9, 55, 61);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid rgb(46, 46, 46);
+  }
+
+  .small_messages {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgb(116, 116, 116);
+  }
+
+  .how {
+    font-size: 30px;
+  }
 }

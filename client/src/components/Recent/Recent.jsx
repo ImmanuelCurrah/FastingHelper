@@ -16,7 +16,7 @@ export default function Recent(props) {
     //eslint-disable-next-line
   }, []);
   return (
-    <div>
+    <div className={classes.container_above}>
       <div>
         {pastSchedules.map((schedule) => {
           return (

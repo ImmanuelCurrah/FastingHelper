@@ -57,7 +57,7 @@ export default function Home(props) {
           </div>
           <div className={classes.check_in_messages}>
             <div className={classes.small_messages}>Daily check-in</div>
-            <div>How are you feeling today?</div>
+            <div className={classes.how}>How are you feeling today?</div>
             <div className={classes.small_messages}>
               have you checked in today?
             </div>

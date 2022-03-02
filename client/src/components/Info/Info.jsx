@@ -2,7 +2,7 @@ import classes from "./Info.module.css";
 
 export default function Info() {
   return (
-    <div>
+    <div className={classes.container}>
       <h2>8 hour intermittent Fasting</h2>
       <div className={classes.information}>
         <div className={classes.text}>

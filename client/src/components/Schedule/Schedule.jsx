@@ -31,7 +31,7 @@ export default function Schedule(props) {
   }
 
   return (
-    <>
+    <div className={classes.container}>
       <div>{`Hello ${currentUser?.name}, this is the current schedule you have set for yourself:`}</div>
       <div>
         {currentSchedule ? (
@@ -50,6 +50,6 @@ export default function Schedule(props) {
           <div>please set a schedule</div>
         )}
       </div>
-    </>
+    </div>
   );
 }
