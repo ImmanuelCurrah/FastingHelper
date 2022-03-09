@@ -10,6 +10,9 @@ import {
   TimerPage,
   RecentPage,
   InfoPage,
+  ConnectPage,
+  DiscoverPage,
+  LearnPage,
 } from "../../exports";
 
 import {
@@ -102,6 +105,15 @@ export default function UserContainer(props) {
             path="profile/info"
             element={<InfoPage setPathway={setPathway} />}
           />
+          <Route
+            path="connect"
+            element={<ConnectPage setPathway={setPathway} />}
+          />
+          <Route
+            path="discover"
+            element={<DiscoverPage setPathway={setPathway} />}
+          />
+          <Route path="learn" element={<LearnPage setPathway={setPathway} />} />
         </Routes>
       </div>
     </Layout>

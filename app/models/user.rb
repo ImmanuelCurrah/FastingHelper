@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_one :schedule
+  has_one :group
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
 
